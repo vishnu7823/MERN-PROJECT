@@ -8,7 +8,7 @@ function HospitalList() {
   const [noRecordsFound, setNoRecordsFound] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/v1/hospitals')
+    fetch('https://mern-project-4-ling.onrender.com/api/v1/hospitals')
       .then(response => response.json())
       .then(data => setHospitals(data))
       .catch(error => console.error('Error fetching hospitals:', error));
@@ -26,7 +26,7 @@ function HospitalList() {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this hospital?')) {
       try {
-        const response = await fetch(`http://localhost:5000/api/v1/hospitals/delete?id=${id}`, {
+        const response = await fetch(`https://mern-project-4-ling.onrender.com/api/v1/hospitals/delete?id=${id}`, {
           method: 'DELETE',
         });
 

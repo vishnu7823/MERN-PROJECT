@@ -23,7 +23,7 @@ const EditHospital = () => {
   useEffect(() => {
     const fetchHospital = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/v1/hospitals/details?id=${id}`);
+        const response = await fetch(`https://mern-project-4-ling.onrender.com/api/v1/hospitals/details?id=${id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch hospital data');
         }
@@ -71,7 +71,7 @@ const EditHospital = () => {
     console.log('Payload:', payload); // Log payload to verify
   
     try {
-      const response = await fetch(`http://localhost:5000/api/v1/hospitals/update?id=${id}`, {
+      const response = await fetch(`https://mern-project-4-ling.onrender.com/api/v1/hospitals/update?id=${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

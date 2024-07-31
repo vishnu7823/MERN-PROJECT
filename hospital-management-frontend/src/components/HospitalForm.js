@@ -32,7 +32,7 @@ function HospitalForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:5000/api/v1/hospitals/create', {
+    fetch('https://mern-project-4-ling.onrender.com/api/v1/hospitals/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
